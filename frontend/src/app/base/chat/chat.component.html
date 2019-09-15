@@ -1,0 +1,15 @@
+<div class="body">
+  <div class="message" *ngFor="let m of message">{{m}}</div>
+</div>
+
+<div class="chat">
+  <mat-form-field class="ms">
+    <input #m matInput placeholder="Сообщение" type="text"/>
+  </mat-form-field>
+
+  <button (click)="send(m)"
+    mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
+    <mat-icon>send</mat-icon>
+  </button>
+
+</div>

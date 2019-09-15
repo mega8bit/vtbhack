@@ -1,0 +1,35 @@
+.topic {
+  padding: 20px;
+  font-size: 16px;
+  position: relative;
+  border: 1px solid #C9D4DA;
+
+  &-0 {
+    background-color: #ed1c24;
+    color: white;
+    border: 1px solid rgba(255, 30, 45, 0.45);
+  }
+
+  &-body {
+    margin-bottom: 12px;
+  }
+
+  &-footer {
+    display: flex;
+    font-size: 14px;
+
+    &-deadline {
+
+    }
+
+    &-status {
+      margin-left: auto;
+    }
+
+  }
+}
+
+.main-title {
+  text-align: center;
+  margin-top: 18px;
+}

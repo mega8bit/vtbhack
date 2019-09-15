@@ -1,0 +1,11 @@
+.container {
+  width: 440px;
+  margin: 0 auto;
+  &-body {
+    margin: 40px 0;
+  }
+}
+
+:host{
+  display: flex;
+}

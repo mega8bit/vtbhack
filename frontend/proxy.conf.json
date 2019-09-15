@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://api.vtbhack.farwydi.ru",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,49 @@
+@import '../../../theme';
+
+.title {
+  margin-bottom: 40px;
+}
+
+.body {
+  margin-top: 20px;
+  display: flex;
+
+  .content {
+    margin: 0 auto;
+    //max-width: 600px;
+    min-width: 500px;
+  }
+}
+
+.accept {
+  margin-right: 20px;
+}
+
+.questions {
+
+  .question {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &-0 {
+      background-color: $primary;
+      color: white;
+    }
+
+    &-1 {
+      background-color: $warn;
+      color: white;
+    }
+
+    &-2 {
+      background-color: $primary-light;
+      //color: white;
+    }
+
+    &-status {
+      margin-left: auto;
+    }
+  }
+}

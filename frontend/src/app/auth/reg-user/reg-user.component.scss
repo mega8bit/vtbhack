@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  .btn {
+    width: 180px;
+    margin: 0 auto;
+    height: 60px;
+  }
+
+  //color: #ed1c24;
+  //color: #ff9b9f;
+  //color: #0a2896;
+  //color: #1e4bd2;
+  //color: #446de4;
+
+  > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.tel-input-container {
+
+}
+
+
+
+

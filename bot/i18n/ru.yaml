@@ -1,0 +1,10 @@
+language: "Русский"
+back: "Назад"
+command_start: "Привет, {{.UserFirstName}}!"
+no_access: "Для привязки Telegram к вашему аккаунту укажите в настройках ID %d"
+main_current_topics: "Текущие повестки (%d)"
+main_no_topics: "Нет повесток на текущий момент"
+topic_view: |
+  🔸 <b>{{.Title}}</b>
+  📅 Deadline: <code>{{.StartDate}}</code>
+topic_question: "▪ %s"

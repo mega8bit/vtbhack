@@ -1,0 +1,27 @@
+@import "../../../theme";
+
+:host {
+}
+
+.message {
+  padding: 10px;
+  background-color: #EBF1F4;
+  border-radius: 2%;
+  margin: 10px;
+}
+
+.body {
+  height: calc(100vh - 200px);
+  overflow-x: scroll;
+  background-color: mat-color(mat-palette($base_color, 130));
+}
+
+.ms {
+  width: 100%;
+}
+
+.chat {
+  padding: 10px;
+  align-items: center;
+  display: flex;
+}

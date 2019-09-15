@@ -1,0 +1,10 @@
+bot:
+  token: "970879349:AAHUQ10UX9vjCDkA0g1seb6t1y3zFvjiCPw"
+  debug: true
+db:
+  name: "vtbhack"
+  user: "vtbhack"
+  password: "Koo6ahghok3cahGu9cae"
+  host: "195.181.245.183"
+  charset: "utf8"
+  port: 5432

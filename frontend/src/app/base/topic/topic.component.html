@@ -1,0 +1,19 @@
+<h3 class="mat-title main-title">ДОКУМЕНТЫ НА СОГЛАСОВАНИИ</h3>
+
+<div class="topics">
+
+  <div class="topic topic-{{t.status}}" *ngFor="let t of topics"
+       (click)="select.emit(t)">
+
+    <div class="topic-body">{{t.title}}</div>
+
+    <div class="topic-footer">
+
+      <div class="topic-footer-deadline">Утвердить до 18:00</div>
+      <div class="topic-footer-status">Ожедает вашего решения</div>
+
+    </div>
+
+  </div>
+
+</div>

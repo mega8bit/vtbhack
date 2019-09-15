@@ -1,0 +1,77 @@
+<div class="form">
+  <h3 class="mat-title title">Новое голосование</h3>
+
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup" class="form-x">
+        <ng-template matStepLabel>Создание голосования</ng-template>
+        <mat-form-field>
+          <input formControlName="title" matInput placeholder="Загаловок голосования">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Решение коллизий</mat-label>
+          <select matNativeControl formControlName="type" required>
+            <option value="0">Решение принимает ответственный</option>
+            <option value="0">Не проголосовавшие не учитываются</option>
+            <option value="0">Автоматическое разрешение</option>
+          </select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input formControlName="start" matInput [matDatepicker]="pickerStart" placeholder="Время начало">
+          <mat-datepicker-toggle matSuffix [for]="pickerStart"></mat-datepicker-toggle>
+          <mat-datepicker #pickerStart></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input formControlName="end" matInput [matDatepicker]="pickerEnd" placeholder="Дедлайн">
+          <mat-datepicker-toggle matSuffix [for]="pickerEnd"></mat-datepicker-toggle>
+          <mat-datepicker #pickerEnd></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input formControlName="main_user" matInput placeholder="Ответственный"/>
+        </mat-form-field>
+
+        <div class="pushm">
+          <button
+            [disabled]="firstFormGroup.invalid"
+            (click)="create()"
+            mat-stroked-button color="primary" matStepperNext>Создать повестку
+          </button>
+        </div>
+
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <ng-template matStepLabel>Добавить вопросы</ng-template>
+      <div class="sec">
+        <div class="add">
+          <mat-form-field style="width: 100%" class="formxxazcsasfda">
+            <input #addx matInput placeholder="Новый вопрос на обсуждение">
+          </mat-form-field>
+
+          <button [disabled]="addx.value == '' || this.topicId === null"
+                  color="primary"
+                   mat-stroked-button (click)="add(addx.value)">Создать
+          </button>
+        </div>
+
+        <div class="sdkjhsdf" *ngFor="let i of item">
+          {{i}}
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn"
+                [disabled]="firstFormGroup.invalid"
+                routerLink="/topic"
+                mat-raised-button color="primary">Запустить</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+</div>
+
+

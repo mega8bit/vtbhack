@@ -1,0 +1,84 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+  query: Query
+  mutation: Mutations
+  subscription: Subscriptions
+}
+
+type Message {
+  body: String
+  id: Int
+  questionId: Int
+  quoteId: Int
+  userId: Int
+}
+
+type MessageTypeWithName {
+  body: String
+  id: Int
+  questionId: Int
+  quoteId: Int
+  userName: String
+}
+
+type Mutations {
+  createQuestion(title: String!, topicId: Int!): ID
+  createTopic(chairmanId: Int!, endDateTime: String!, startDateTime: String!, title: String!, typeId: Int!): Int
+  createUser(email: String!, name: String!, password: String!, phone: Int!, position: String!, surname: String!, telegramId: Int!, weight: Int!): String
+  editUser(email: String!, id: Int!, name: String!, password: String!, phone: Int!, position: String!, surname: String!, telegramId: Int!, weight: Int!): Boolean
+}
+
+type Query {
+  messages(topicId: Int!): [MessageTypeWithName]
+  questions(topic_id: Int!): [Question]
+  topics: [Topic]
+  user(email: String!, password: String): User
+  userAll: [UserList]
+}
+
+type Question {
+  id: Int
+  status: Int
+  title: String
+  topicId: Int
+}
+
+type Subscriptions {
+  addMessage(body: String!, questionId: Int!, quoteId: Int): Message
+}
+
+type Topic {
+  chairman_id: Int
+  endDateTime: DateTime
+  id: Int
+  startDateTime: DateTime
+  status: Int
+  title: String
+  typeId: Int
+}
+
+type User {
+  email: String
+  id: Int
+  isAdmin: Boolean
+  name: String
+  phone: Int
+  photo: String
+  position: String
+  status: Int
+  surname: String
+  telegramId: Int
+  token: String
+  weight: Int
+}
+
+type UserList {
+  id: Int
+  name: String
+  surname: String
+}
+
+
+"The `DateTime` scalar type represents a DateTime. The DateTime is serialized as an RFC 3339 quoted string"
+scalar DateTime

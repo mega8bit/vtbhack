@@ -1,0 +1,27 @@
+@import "../../theme";
+
+.toolbar {
+  background-color: white;
+  position: relative;
+}
+
+.logo {
+  height: 22px;
+}
+
+.base {
+  display: flex;
+
+  .topic {
+    flex: 1;
+  }
+
+  .questions {
+    flex: 2;
+  }
+
+  .chat {
+    flex: 1;
+    //background-color: mat-color(mat-palette($base_color, 130));
+  }
+}

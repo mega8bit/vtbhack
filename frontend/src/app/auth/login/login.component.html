@@ -1,0 +1,17 @@
+<h3 class="mat-title title">Авторизация</h3>
+
+<div class="form" [formGroup]="loginForm">
+  <mat-form-field>
+    <input formControlName="email" matInput placeholder="Почта">
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input formControlName="password" matInput placeholder="Пароль" type="password"/>
+    <mat-error *ngIf="password.invalid">Обязательное поле</mat-error>
+  </mat-form-field>
+
+  <div class="btn-group">
+    <button class="btn" (click)="login()" [disabled]="!ready" mat-raised-button color="accent">Авторизоваться</button>
+  </div>
+</div>

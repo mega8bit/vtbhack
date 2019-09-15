@@ -1,0 +1,24 @@
+<mat-toolbar class="toolbar mat-elevation-z2">
+  <img class="logo" src="assets/logo-new.svg" alt="logo">
+
+  <div class="user">
+    <div class="avatar">
+
+    </div>
+  </div>
+
+</mat-toolbar>
+
+<main class="base">
+  <section class="topic">
+    <app-topic (select)="selectTopic($event)" [topics]="topics"></app-topic>
+  </section>
+
+  <section class="questions">
+    <app-questions *ngIf="selectedTopic" [topic]="selectedTopic" [questions]="getQuestions"></app-questions>
+  </section>
+
+  <section class="chat">
+    <app-chat></app-chat>
+  </section>
+</main>
